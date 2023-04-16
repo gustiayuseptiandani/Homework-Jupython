@@ -1,12 +1,11 @@
-Jumlah row 899164
-Jumlah column 27
+shape data frame :
+- Jumlah row 899164
+- Jumlah column 27
 
 Data Cleaning
-Duplicated data : no duplicated data
-missing value   : kolom yg missing value di drop
-Handling outliers : dihapus
-sebelum dihapus (456239,)
-sesudah dihapus (387552,)
+- Duplicated data : no duplicated data
+- missing value   : kolom yg missing value di drop
+- Handling outliers : dihapus. sebelum dihapus (456239,) sesudah dihapus (387552,)
 
 Handle error value  : 
 - Ubah kolom ApprovalDate, DisbursementDate menjadi datetime
@@ -28,20 +27,19 @@ Feature Extraction
 
 Feature selection
 berikut adalah fitur-fitur yang dihapus dan alasannya :
-Alasan di drop :
-'LoanNr_ChkDgt': merupakan primary key
-'Name' : memiliki kardinalitas yang sangat tinggi dan hanya memuat informasi nama bisnis sehingga tidak dapat dijadikan prediktor target.
-'City', 'Zip' : memiliki kardinalitas yang sangat tinggi dan telah diwakilkan oleh state.
-'State' : memiliki kardinalitas yang tinggi dan telah digantikan oleh statesame.
-'Bank' : memiliki kardinalitas yang sangat tinggi dan hanya memuat informasi nama bank sehingga tidak dapat dijadikan prediktor target.
-'BankState' : memiliki kardinalitas yang tinggi dan telah digantikan oleh statesame.
-'NAICS' : digantikan oleh industri.
-'ApprovalDate' dan 'ApprovalFY' merujuk pada waktu pinjaman ketika disetujui sehingga tidak dapat menjadi preditor target.
-'FranchiseCode: memiliki kardinalitas yang tinggi dan telah digantikan oleh Franchise
-'ChgOffDate': 75% data pada feature berisi null value, feature ini menunjukkan tanggal ketika peminjaman dinyatan gagal.
-'MIS_Status': digantikan Default
-'GrAppv' dan 'SBA_Appv': digantikan SBAApvPct
-'Industry': digantikan PctIndustri
+- 'LoanNr_ChkDgt': merupakan primary key
+- 'Name' : memiliki kardinalitas yang sangat tinggi dan hanya memuat informasi nama bisnis sehingga tidak dapat dijadikan prediktor target.
+- 'City', 'Zip' : memiliki kardinalitas yang sangat tinggi dan telah diwakilkan oleh state.
+- 'State' : memiliki kardinalitas yang tinggi dan telah digantikan oleh statesame.
+- 'Bank' : memiliki kardinalitas yang sangat tinggi dan hanya memuat informasi nama bank sehingga tidak dapat dijadikan prediktor target.
+- 'BankState' : memiliki kardinalitas yang tinggi dan telah digantikan oleh statesame.
+- 'NAICS' : digantikan oleh industri.
+- 'ApprovalDate' dan 'ApprovalFY' merujuk pada waktu pinjaman ketika disetujui sehingga tidak dapat menjadi preditor target.
+- 'FranchiseCode: memiliki kardinalitas yang tinggi dan telah digantikan oleh Franchise
+- 'ChgOffDate': 75% data pada feature berisi null value, feature ini menunjukkan tanggal ketika peminjaman dinyatan gagal.
+- 'MIS_Status': digantikan Default
+- 'GrAppv' dan 'SBA_Appv': digantikan SBAApvPct
+- 'Industry': digantikan PctIndustri
 
 
 Handling Imbalance
